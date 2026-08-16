@@ -34,6 +34,20 @@ def main():
         logging.error("Formato de data inválido. Use YYYY-MM-DD.")
         sys.exit(1)
 
+    try:
+        # Pipeline principal (muito fácil de explicar na apresentação!)
+        vendas = ler_csv_vendas(args.arquivo)
+        vendas = filtrar_vendas(vendas, data_inicio, data_fim)
+        resumo = calcular_resumo(vendas)
+
+        if args.format == "json":
+            print(gerar_saida_json(resumo))
+        else:
+            print(gerar_saida_texto(resumo))
+
+    except Exception as e:
+        logging.error("Falha na execução da CLI.")
+        sys.exit(1)
 
 
 if __name__ == "__main__":
