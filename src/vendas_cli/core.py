@@ -4,7 +4,6 @@ from datetime import date
 
 def filtrar_vendas(vendas: List[Dict[str, Any]], data_inicio: Optional[date], data_fim: Optional[date]) -> List[
     Dict[str, Any]]:
-    """Filtra as vendas com base em um intervalo de datas."""
     vendas_filtradas = vendas
     if data_inicio:
         vendas_filtradas = [v for v in vendas_filtradas if v["data"] >= data_inicio]
@@ -14,7 +13,6 @@ def filtrar_vendas(vendas: List[Dict[str, Any]], data_inicio: Optional[date], da
 
 
 def calcular_resumo(vendas: List[Dict[str, Any]]) -> Dict[str, Any]:
-    """Realiza os cálculos principais: total por produto, total geral e mais vendido."""
     total_geral = 0.0
     vendas_por_produto: Dict[str, float] = {}
     quantidade_por_produto: Dict[str, int] = {}

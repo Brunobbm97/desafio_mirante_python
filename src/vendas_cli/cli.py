@@ -18,12 +18,12 @@ def configurar_logs():
 def main():
     configurar_logs()
 
-    parser = argparse.ArgumentParser(description="Gerador de Relatório de Vendas Avançado[cite: 1]")
-    parser.add_argument("arquivo", help="Caminho do arquivo CSV de vendas[cite: 1]")
+    parser = argparse.ArgumentParser(description="Gerador de Relatório de Vendas Avançado")
+    parser.add_argument("arquivo", help="Caminho do arquivo CSV de vendas")
     parser.add_argument("--format", choices=["text", "json"], default="text",
-                        help="Formato de saída (text ou json)[cite: 1]")
-    parser.add_argument("--start", help="Data de início (YYYY-MM-DD)[cite: 1]")
-    parser.add_argument("--end", help="Data de término (YYYY-MM-DD)[cite: 1]")
+                        help="Formato de saída (text ou json)")
+    parser.add_argument("--start", help="Data de início (YYYY-MM-DD)")
+    parser.add_argument("--end", help="Data de término (YYYY-MM-DD)")
 
     args = parser.parse_args()
 

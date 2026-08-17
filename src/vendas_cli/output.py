@@ -3,7 +3,6 @@ from typing import Dict, Any
 
 
 def gerar_saida_texto(resumo: Dict[str, Any]) -> str:
-    """Gera uma saída formatada em texto (tabela)."""
     linhas = []
     linhas.append("=" * 40)
     linhas.append("RELATÓRIO DE VENDAS".center(40))
@@ -24,5 +23,4 @@ def gerar_saida_texto(resumo: Dict[str, Any]) -> str:
 
 
 def gerar_saida_json(resumo: Dict[str, Any]) -> str:
-    """Gera uma saída em formato JSON[cite: 1]."""
     return json.dumps(resumo, indent=4, ensure_ascii=False)

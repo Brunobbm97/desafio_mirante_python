@@ -7,7 +7,6 @@ logger = logging.getLogger(__name__)
 
 
 def ler_csv_vendas(caminho_arquivo: str) -> List[Dict[str, Any]]:
-    """Lê o arquivo CSV de vendas e retorna uma lista de dicionários tipados."""
     vendas = []
     try:
         with open(caminho_arquivo, mode='r', encoding='utf-8') as arquivo:
