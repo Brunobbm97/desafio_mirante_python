@@ -19,7 +19,7 @@ Recomenda-se a instalação da ferramenta utilizando um ambiente virtual para is
 
 1. Clone o repositório:
 ```bash
-git clone <URL_DO_SEU_REPOSITORIO>
+git clone https://github.com/Brunobbm97/desafio_mirante_python.git
 cd vendas-cli
 ```
 
